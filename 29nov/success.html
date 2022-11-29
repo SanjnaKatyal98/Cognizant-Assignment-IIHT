@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Success</title>
+        <script src="disp.js"></script>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <p id="p1"></p>
+        <p id ="lati"></p>
+        <p id="long"></p>
+        <p id="acc"></p>
+        <script>
+            window.onload=function (){
+                document.getElementById('p1').innerText=localStorage.getItem('uname')
+            }
+        </script>
+    </body>
+</html>
