@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Assignment 6</title>
+        <script>
+            let myWindow;            
+            function exit() {
+              myWindow.close();
+            }
+        </script>
+	</head>
+	<body>
+        <div>
+        <form method="get">
+            <b>Enter first name:</b> <input type="text"><br><br>
+            <b>Enter last name:</b> <input type="text"><br><br>
+            <b>Enter address:</b> <textarea name="addr" rows="10" cols="30"></textarea><br><br>
+            <b>Programs attended:</b>
+                <input type="checkbox" id="HTML" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="java" value="java">
+                <label for="java">java</label>
+                <input type="checkbox" id="oracle" value="oracle">
+                <label for="oracle">oracle</label>
+            <br><br>
+            <b>Select stream you belong to:</b>
+                <input type="radio" id="mtech" value="Mtech">
+                <label for="mtech">Mtech</label>
+                <input type="radio" id="eee" value="EEE">
+                <label for="EEE">EEE</label>
+                <input type="radio" id="CS" value="CS">
+                <label for="CS">CS</label>
+                <input type="radio" id="IT" value="IT">
+                <label for="IT">IT</label>
+            <br><br>
+            <b>which training program wuld you like to attend?</b>
+                <select id="stream">
+                    <option value="html5 advanced">html5 advanced</option>
+                    <option value="javascript">javascript</option>
+                    <option value="angular">angular</option>
+                </select>
+            <br><br>
+            <b>upload your resume:</b>
+                <input type="file" id="resume" name="resume"><br><br>
+            <button type="button0" onclick="exit()">exit</button>
+            <button type="button" onclick="alert('form saved')">save</button>
+            <button type="button1">reset</button>
+        </form>
+        </div>    
+    </body>
+</html>
