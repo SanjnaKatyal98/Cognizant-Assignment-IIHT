@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body{
+    background-color: #8c8fa3;
+}
+header{
+    background-color: rgb(149, 255, 0);
+    box-shadow: 0 0 30px 6px #881211;
+}
+
+header nav{
+
+    width: 900px;
+    margin:auto;
+}
+
+header nav ul{
+list-style: none;
+display: flex;
+
+}
+
+header nav ul li a{
+
+  color:white;
+  display: block;
+  padding: 21px;
+  text-decoration: none;
+
+
+}
+header nav  ul li a:hover{
+
+    text-decoration: underline;
+
+}
+
+header nav ul li a#site-name{
+
+    font-weight: bold;
+    color:white;
+}
+
+main article{
+    width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+main article p{
+    line-height: 1.5;
+    padding:15px;
+}
+
+#skip-navigation{
+    position:fixed;
+    top:-100;
+    left:0;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    border :3px solid green
+}
+
+#skip-navigation:focus{
+    top:0;
+}
