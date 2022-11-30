@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>addition</title>
+    </head>
+    <body>
+        <h2>addition</h2>
+        <input type="number" id="n1" value="0" placeholder="enter no."> +
+        <input type="number" id="n2" value="0" placeholder="enter no."> =
+        <p id="result"></p>
+        <script>
+            let x=document.getElementById("n1");
+            let y=document.getElementById("n2");
+            x.addEventListener("keyup",add,true);
+            y.addEventListener("keyup",add,true);
+            function add(){
+                let rs= parseInt(x.value)+parseInt(y.value);
+                document.getElementById("result").innerText=(rs);
+            }
+        </script>
+    </body>
+</html>

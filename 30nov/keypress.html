@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>keypress</title>
+    </head>
+    <body>
+        <h2>keypress function</h2>
+        <textarea id="keyPP"  style="border: 1px solid black; height: 50px; width: 80px;"></textarea>
+        <script>
+            let a=document.getElementById("keyPP");
+            a.addEventListener("keydown",keyPPP,true);
+            a.addEventListener("keyup",keyPPPP,true);
+            function keyPPP(){
+                a.style.backgroundColor="red";
+            }
+            function keyPPPP(){
+                a.style.backgroundColor="yellow";
+            }
+        </script>
+    </body>
+</html>

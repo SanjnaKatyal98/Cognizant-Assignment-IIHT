@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>event handling</title>
+    </head>
+    <body>
+        <h2>event management</h2>
+        <select id="menu">
+            <option id="mango">mango</option>
+            <option id="apple">apple</option>
+            <option id="kiwi">kiwi</option>
+            <option id="orange">orange</option>
+        </select><br><br>
+        <p id="p1"></p>
+        <script>
+            let fav=document.getElementById("menu");
+            fav.addEventListener("change",selectFavFrut,true);
+            let rs=document.getElementById("p1");
+            function selectFavFrut(){
+                if(document.getElementById("apple").selected)
+                  rs.innerHTML="Apple";
+                if(document.getElementById("mango").selected)
+                  rs.innerHTML="Mango";
+                if(document.getElementById("kiwi").selected)
+                  rs.innerHTML="kiwi";
+                if(document.getElementById("orange").selected)
+                  rs.innerHTML="Orange";
+            }
+        </script>
+    </body>
+</html

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>event handling</title>
+    </head>
+    <body>
+        <h2>event management</h2>
+        <input type="checkbox" id="cb">checkbox<br>
+        <p id="p1"></p>
+        <br><br>
+        Enter your message : <input type="text" id="mssg"><br>
+        <script>
+            let check=document.getElementById("cb");
+            check.addEventListener("change",checkBB,true);
+            function checkBB(){
+                if(check.checked){
+                    document.getElementById("p1").innerHTML="on";
+                }
+                else{
+                    document.getElementById("p1").innerHTML="off";
+                }
+            }
+
+            let x=document.getElementById("mssg");
+            x.addEventListener("focus",focusF,true);
+            x.addEventListener("blur",blurB,true);
+
+            function focusF(){
+                document.getElementById("mssg").style.backgroundColor="red";
+            }
+            function blurB(){
+                document.getElementById("mssg").style.backgroundColor="green";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>hw assignment</title>
+        <style>
+            .parent{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+            .main{
+                display: flex;
+                flex-grow: 1;
+            }
+            .content{
+                flex-grow: 1;
+            }
+            .child{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1%;
+                padding: 20px;
+                font-size: 20px;
+                line-height: 20px;
+                color: beige;
+                background-color: grey;
+                border-radius: 10px;
+                border: 5px solid black;
+            }  
+            body{
+                background-color: white;
+                font-weight: 600;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-align: center;">hw</h2>
+        <div class="parent">
+            <div class="child">Header</div>
+            <div class="main">
+                <div class="child">
+                    Side Bar<br>
+                    some extra info
+                </div>
+                <div class="child content">
+                    <section>
+                        Section Part<br>
+                        some info<br>
+                        <article>
+                            Article Part<br>
+                            some detail info<br>
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <div class="child">Footer</div>
+        </div>
+    </body>
+</html>

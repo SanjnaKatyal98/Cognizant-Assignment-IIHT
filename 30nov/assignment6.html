@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>event handling</title>
+    </head>
+    <body>
+        <h2>event management</h2>
+        <video id="vid" width="350" height="350" controls>
+            <source src="video.mp4" onerror="errorMssg()" type="video/mp4">
+        </video>
+        <br><br>
+        <audio id="audi" controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function errorMssg(){
+                console.log("sorry cant play video");
+                alert('error in playing video!');
+            }
+            let a=document.getElementById("audi");
+            a.addEventListener("error",errorMssg1,true);
+            function errorMssg1(){
+                console.log("sorry cant play audio");
+                alert("Error in playing audio!");
+            }
+        </script>
+    </body>
+</html>
