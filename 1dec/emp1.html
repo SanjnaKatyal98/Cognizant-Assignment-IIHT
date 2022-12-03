@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>employee form</title>
+        <style>
+            .formData{
+                background-color: violet;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="formData">
+        <form method="get" name="empForm" action="storeEmpData.html">
+            <div class="row">
+                Emp ID: <input type="number" name="empId" id="id" required><br>
+                <div class="error" id="emailErr">
+            </div></div>
+            <div class="row">
+                Name: <input type="text" name="empName" id="fname" required><br>
+                <div class="error" id="nameErr">
+            </div></div>
+            <div class="row">
+                Mobile Number: <input type="text" name="mobile" maxlength="10"><br>
+                <div class="error" id="mobileErr">
+            </div></div>
+            Dept: <input type="text" name="dept" id="dept" required><br>
+            <div class="row">
+                Gender: <input type="radio" name="sex" required>Male
+                        <input type="radio" name="sex" required>Female<br>
+                        <div class="error" id="genderErr">
+            </div></div>
+            <div class="row">
+                Hobbies: <input type="checkbox" name="hobbies[]" value="paint">paint
+                        <input type="checkbox" name="hobbies[]" value="read books">read books
+                        <input type="checkbox" name="hobbies[]" value="gardening">gardening<br>
+            </div>
+            Email: <input type="email" name="mail" id="mail" required><br>
+            Username: <input type="text" name="username" id="username" minlength="8" maxlength="15" required><br>
+            Password: <input type="password" name="pass" id="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required><br>
+            <div class="row"><input type="submit" value="submit"><br></div>
+        </form>
+        <p class="errorMessage"></p>
+        </div>
+
+        <script>
+            window.onload=myFunc();
+            function myFunc(){
+            document.getElementById("name").innerHTML=sessionStorage.getItem("name");
+            document.getElementById("email").innerHTML=sessionStorage.getItem("email");
+            document.getElementById("mobile").innerHTML=sessionStorage.getItem("mobile");
+            document.getElementById("gender").innerHTML=sessionStorage.getItem("gender");
+            document.getElementById("hobbies").innerHTML=sessionStorage.getItem("hobbies[]");
+            }
+        </script>
+
+    </body>
+</html>

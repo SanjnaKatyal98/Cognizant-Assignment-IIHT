@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>psuedoclasses</title>
+        <style>
+            ul li:last-child{
+                background-color: red;
+            }
+            #h{
+                color: pink;
+            }
+            body{
+                background-color: black;
+                color: aquamarine;
+            }
+            p::after{
+                content: '**';
+                color: brown;
+            }
+            p::first-line{
+                text-indent: 5px;
+            }
+            ul::before{
+                content: '**';
+                color: plum;
+            }
+            div{
+                background-color: skyblue;
+                height: 350;
+                width: 500;
+                margin: 15px;
+                padding: 10px;
+                color: darkslategray;
+            }
+            .c:hover{
+                opacity: 70%;
+            }
+            .btn:hover{
+                font-size:15px; 
+                background-color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h">heading</h1>
+        <p>
+                fistline.
+            <br>secondline.
+            <br>third line.
+        </p>
+        <ul>
+            <li>apple</li>
+            <li>mango</li>
+            <li>strawberry</li>
+        </ul>
+        <div class="c">
+            <center>
+            <h3>Transition</h3>
+            <button class="btn">click</button>
+            </center>
+        </div>
+    </body>
+</html>

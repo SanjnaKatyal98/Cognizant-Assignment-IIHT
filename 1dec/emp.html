@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>employee form</title>
+        <style>
+            #eform{
+                background-color: violet;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" id="eform" name="empForm" action="storeEmpData.html">
+            Emp ID: <input type="number" name="empId" id="id" required><br><br>
+            Name: <input type="text" name="empName" id="fname" required><br><br>
+            Dept: <input type="text" name="dept" id="dept" required><br><br>
+            Gender: <input type="radio" name="sex" required>Male
+                    <input type="radio" name="sex" required>Female<br><br>
+            Hobbies: <input type="checkbox">paint
+                     <input type="checkbox">read books
+                     <input type="checkbox">gardening<br><br>
+            Email: <input type="email" name="mail" id="mail" required><br><br>
+            Username: <input type="text" name="username" id="username" minlength="8" maxlength="15" required><br><br>
+            Password: <input type="password" name="pass" id="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
+            <br><br><input type="submit" value="submit"><br>
+        </form>
+    </body>
+</html>

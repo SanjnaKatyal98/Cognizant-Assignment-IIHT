@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>psuedoclasses</title>
+        <style>
+            .btn:not(:disabled){
+                border: 3px solid green;
+                background-color: orangered;
+            }
+            p:not(.p1){
+                background-color: pink;
+                text-indent: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="p1">first parah</p>
+        <p class="p1">second parah</p>
+        <p>third parah,no class</p>
+        <button class="btn">click</button>
+        <button class="btn" disabled>click</button>
+    </body>
+    </html>
