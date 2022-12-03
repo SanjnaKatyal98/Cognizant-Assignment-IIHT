@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>animate</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            div{
+                background-color: pink;
+                height: 100px;
+                width: 100px;
+                position: relative;
+                animation-name: example;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes example{
+                from{left:0px;}
+                to{left:1200px;
+                    background-color:skyblue;}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>animation</h1>
+        <div></div>
+    </body>
+</html>

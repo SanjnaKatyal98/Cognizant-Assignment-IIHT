@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>drag and drop</title>
+        <style>
+            div{
+                background-color: plum;
+                height: 300px;
+                width: 300px;
+                padding: 10px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>drag drop content</h1>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag1" src="C:\\Users\\katsa\\OneDrive\\Desktop\\new training cogni\\moon.jpeg" draggable="true" 
+                ondragstart="drag(event)" width="310px" height="310px">
+        </div><br>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <script>
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+            function drag(ev){
+                ev.dataTransfer.setData("text",ev.target.id);
+            }
+            function drop(ev){
+                ev.preventDefault();
+                var data=ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

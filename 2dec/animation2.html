@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            div{
+                background-color: aquamarine;
+                height: 200px;
+                width: 200px;
+                padding: 10px;
+                margin:10px;}
+            .c2{
+                opacity: 50%;
+                background-color: yellow;
+                transition: opacity 0.5s;
+                transition: background-color 1.0s;
+            }
+            .c2:hover{
+                opacity: 100%;
+                background-color: red;
+                transition: opacity 0.5s;
+                transition : background-color ease-in 1.0s;
+            }
+            .c1:hover{
+                color: blue;
+                font-size: larger;
+                background-color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="c2">
+            <center>
+                <h2>Animate</h2>
+                <button class="c1">Click to animate</button>
+            </center>
+        </div>
+    </body>
+</html>
