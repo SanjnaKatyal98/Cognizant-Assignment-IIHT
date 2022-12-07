@@ -1,0 +1,63 @@
+.p1 {
+  color: violet;
+  background-color: black;
+  border: 3px solid red;
+}
+
+.p2 {
+  color: violet;
+  background-color: dimgrey;
+}
+
+.p3 {
+  color: violet;
+  background-color: wheat;
+}
+
+h1 {
+  color: lightcoral;
+}
+
+div {
+  width: 80px;
+  height: 80px;
+  background-color: aqua;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+}
+
+@keyframes example {
+  0% {
+    color: violet;
+    left: 0px;
+    top: 0px;
+    background-color: brown;
+  }
+  25% {
+    color: violet;
+    left: 200px;
+    top: 0px;
+    background-color: aquamarine;
+  }
+  50% {
+    color: violet;
+    left: 200px;
+    top: 200px;
+    background-color: deeppink;
+  }
+  75% {
+    color: violet;
+    left: 0px;
+    top: 200px;
+    background-color: darkred;
+  }
+  100% {
+    color: violet;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+  }
+}
+
+/*# sourceMappingURL=mixins.css.map */

@@ -1,0 +1,10 @@
+.div h1 {
+  color: pink;
+  background-color: skyblue;
+}
+.div .div2 h3 {
+  color: black;
+  background-color: maroon;
+  font-size: 3rem;
+  font-weight: bold;
+}

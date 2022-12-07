@@ -1,0 +1,40 @@
+div {
+  height: 100px;
+  width: 100px;
+  background-color: skyblue;
+  margin: 60px auto;
+  animation: colorchange1 5s ease infinite;
+}
+
+.div1 {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  margin: 60px auto;
+  animation: colorchange2 5s ease infinite;
+}
+
+@keyframes colorchange1 {
+  0% {
+    background-color: skyblue;
+  }
+  50% {
+    background-color: maroon;
+  }
+  100% {
+    background-color: skyblue;
+  }
+}
+@keyframes colorchange2 {
+  0% {
+    background-color: pink;
+  }
+  50% {
+    background-color: aquamarine;
+  }
+  100% {
+    background-color: pink;
+  }
+}
+
+/*# sourceMappingURL=animate.css.map */

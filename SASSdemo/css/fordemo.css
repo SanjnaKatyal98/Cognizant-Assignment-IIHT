@@ -1,0 +1,49 @@
+.p1 {
+  padding: 10px;
+  color: green;
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  opacity: 0.2;
+  box-shadow: 4px 3px pink inset;
+  background-color: black;
+}
+
+.p2 {
+  padding: 20px;
+  color: green;
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  opacity: 0.4;
+  box-shadow: 4px 6px pink inset;
+  background-color: black;
+}
+
+.p3 {
+  padding: 30px;
+  color: green;
+  border: 1px solid black;
+  height: 150px;
+  width: 300px;
+  opacity: 0.6;
+  box-shadow: 4px 9px pink inset;
+  background-color: black;
+}
+
+.p4 {
+  padding: 40px;
+  color: green;
+  border: 1px solid black;
+  height: 200px;
+  width: 400px;
+  opacity: 0.8;
+  box-shadow: 4px 12px pink inset;
+  background-color: black;
+}
+
+h1 {
+  background-color: #660099;
+}
+
+/*# sourceMappingURL=fordemo.css.map */
