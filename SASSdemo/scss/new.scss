@@ -1,0 +1,23 @@
+@each $color in gray,brown,plum, pink{
+    .c_#{$color}{
+        background-color: $color;
+    }
+}
+@each $color,$textcolor,$bor in ( gray,black,5px solid black),( brown,yellow,5px solid yellow),(plum,darkviolet,5px solid darkviolet),( pink,green,5px solid green){
+    .c_#{$color}{
+        background-color: $color;
+        color:$textcolor;
+        border: $bor;
+    }
+}
+//@each in map
+@each $headings,$border in(
+    h1:1px solid red,
+    h2:2px dashed green,
+    h3:4px double black,
+    h4:4px dotted pink
+){
+#{$headings}{
+    border:$border;
+}
+}

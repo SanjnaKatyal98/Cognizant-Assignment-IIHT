@@ -1,0 +1,70 @@
+@mixin colormix{
+    color: violet;
+}
+@mixin colormix2{
+    color: lightcoral;
+}
+@mixin dynamicMixin($size,$style,$color){
+    border : $size $style $color;
+}
+.p1{
+    @include colormix;
+    background-color: black;
+    @include dynamicMixin(3px,solid,red);
+}
+.p2{
+    @include colormix;
+    background-color: dimgrey;
+}
+.p3{
+    @include colormix;
+    background-color: wheat;
+}
+h1{
+    @include colormix2()
+}
+div {
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+}
+@keyframes example {
+    // 0%   {background-color:red; left:0px; top:0px;}
+    // 25%  {background-color:yellow; left:200px; top:0px;}
+    0%{
+        @include colormix;
+        left: 0px;
+        top:0px;
+        background-color: brown;
+    }
+    25%{
+        @include colormix;
+        left: 200px;
+        top:0px;
+        background-color: aquamarine;
+    }
+    50%{
+        @include colormix;
+        left: 200px;
+        top:200px;
+        background-color: deeppink;
+    }
+    75%{
+        @include colormix;
+        left: 0px;
+        top:200px;
+        background-color: darkred;
+    }
+    100%{
+        @include colormix;
+        left: 0px;
+        top:0px;
+        background-color: black;}
+
+    // 50%  {background-color:blue; left:200px; top:200px;}
+    // 75%  {background-color:green; left:0px; top:200px;}
+    // 100% {background-color:red; left:0px; top:0px;}
+}
