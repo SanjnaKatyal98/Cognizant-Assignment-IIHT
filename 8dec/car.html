@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <style>
+        div{
+            border-style: dotted;
+            margin: auto;
+            width: 200px;
+            height: 150px;
+        }
+        input{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form id="frm" onsubmit="return saveDetails()">
+        <div>
+        <input type="number" placeholder="Enter Id of the car" id="id"><br>
+        <input type="text" placeholder="Enter Model of the car" id="model"><br>
+        <input type="text" placeholder="Enter Dealer of the car" id="dealer"><br>
+        <input type="number" placeholder="Enter price of the car" id="price"><br>
+        <input type="number" placeholder="Enter batteryLife of the car" id="battery"><br>
+        <button type="submit">ADD</button>
+     </div>
+    </form>
+
+<span id="res"></span>
+<script src="car.js"></script>
+</body>
+</html>

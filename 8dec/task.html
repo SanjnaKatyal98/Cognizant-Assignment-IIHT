@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+        integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ=="
+        crossorigin="anonymous" />
+        <style>
+            .hidden{
+                display: none;
+            }
+        </style>    
+        <title>Todo List</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div id="main" class="card">
+                        <div class="card-content">
+                            <span class="card-title">Task List</span>
+                            <div class="row">
+                                <form id="task-form">
+                                    <div class="input-field col s12">
+                                        <input type="text" name="task" id="task">
+                                        <label for="task">New Task</label>
+                                    </div>
+                                    <input type="submit" value="Add Task" class="btn">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <h5 id="task-title">Tasks</h5>
+                            <div class="input-field col s12">
+                                    <input type="text" name="filter" id="search">
+                                    <label for="filter">Filter Tasks</label>
+                            </div>
+                            <ul id="search-list"  class="search-list">
+    
+                            </ul>
+                            <ul class="collection"></ul>
+                            <a href="#" class="clear-tasks btn black" id="clear">Clear Tasks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--JS for Materialize.css and Jquery because it is a dependency to Materialize-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="task.js"></script>  
+</body>
+</html>
