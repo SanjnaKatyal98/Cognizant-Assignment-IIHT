@@ -1,0 +1,40 @@
+class Employee{
+    constructor(name,id,age){
+        this.name=name;
+        this.id=id;
+        this.age=age;
+    }
+    get name(){
+        return this._name;
+    }
+    get age(){
+        return this._age;
+    }
+    get id(){
+        return this._id;
+    }
+    set id(val){
+        this._id=val;
+    }
+    set name(val){
+        this._name=val;
+    }
+    set age(val){
+        this._age=val;
+    }
+
+    disp=()=>{
+        console.log( `Name:${this.name} Id:${this.id} Age:${this.age}`);
+    };
+}
+
+let sanj=new Employee('sanj',98,28);
+let shahid=new Employee();
+shahid.name='shahid';
+shahid.age=24;
+shahid.id=109;
+
+(sanj.disp());
+console.log(shahid.name);
+console.log(shahid.id);
+console.log(shahid.age);

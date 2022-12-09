@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Mouse move</title>
+        <style>
+            .geeks {
+                width: 100%;
+                height: 600px;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body id="body" class="geeks">
+        <div id="mouse"></div>
+        <p id="print"></p>
+        <script>
+            let div=document.querySelector(".geeks");
+            div.addEventListener(
+                "mousemove", function (e){
+                    x = e.offsetX;
+                    y = e.offsetY;
+                    div.style.backgroundColor=`rgb(${x}, ${y}, ${x - y})`;
+            });
+        </script>
+        <script src="demo.js"></script>
+    </body>
+</html>
