@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <button id="button">Button</button>
+
+    <script>
+
+        let meta=false;
+
+        let shift=false;
+
+const input = document.querySelector("body");
+
+input.addEventListener("keydown", (event) => {
+
+  if (event.key === "Meta" ) {
+    meta=true;
+
+console.log(event);
+
+}
+
+});
+
+input.addEventListener("keydown", (event) => {
+
+if (event.key === "Shift" ) {
+
+shift=true;
+
+console.log(event);
+
+}
+
+});
+input.addEventListener("keyup", (event) => {
+
+if (event.key === "Meta" ) {
+
+  meta=false;
+
+  console.log(event);
+
+}
+
+});
+
+
+
+
+
+input.addEventListener("keyup", (event) => {
+
+if (event.key === "Shift" ) {
+
+  shift=false;
+
+  console.log(event);
+
+}
+
+});
+
+
+
+
+let button=document.getElementById("button");
+
+button.addEventListener("click",(event)=>{
+
+  if(meta && shift){
+
+      alert("Clicked");
+
+  }else{
+
+      alert("Click with Meta and Shift pressed");
+
+  }
+
+
+
+});
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
