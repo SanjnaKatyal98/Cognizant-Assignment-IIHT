@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(1, auto);
+        width: 100%;
+        background-color: antiquewhite;
+        height: 200px;
+      }
+      #cart{
+        background-color: aqua;
+      }
+      li{
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Shopping</h1>
+    <div>
+      <span>
+        <h3>Available Items</h3>
+        <ul >
+          <li id="apple" draggable="true" ondragstart="drag(event)">Apple</li>
+          <li id="pineapple" draggable="true" ondragstart="drag(event)">PineApple</li>
+          <li id="guava" draggable="true" ondragstart="drag(event)">Guava</li>
+          <li id="banana" draggable="true" ondragstart="drag(event)">Banana</li>
+        </ul>
+      </span>
+      
+      <span id="cart" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+      <h3 style="text-align:center;">My cart</h3>
+    </span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

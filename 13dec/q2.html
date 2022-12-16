@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>q2</title>
+        <style>
+
+            #div1{
+    
+                display: flex;
+    
+                text-align: center;
+            }
+
+            #h1{
+                background-color: violet;
+            }
+
+        #temp1,#temp2,h1{
+
+            flex: 32%;
+
+        }
+
+        </style>
+    </head>
+    <body style="background-color: black; color: beige;">
+        <div id="div1">
+
+            <template id="temp1">
+            
+                <style>
+            
+                    p{
+            
+                        width: 300px;
+            
+                        border: 2px solid aqua;
+            
+                    }
+            
+                </style>
+            
+                <p>This is first template</p>
+            
+            </template>
+            
+            <my-temp></my-temp>
+            
+            
+            
+            <h1 id="h1">
+            
+                This is Heading
+            
+            </h1>
+            
+            
+            
+            
+            <template id="temp2">
+            
+                <style>
+            
+                    p{
+            
+                        width: 400px;
+            
+                        border: 2px solid aquamarine;
+            
+                    }
+            
+                </style>
+            
+                <p> 2nd template</p>
+            
+            </template>
+            
+            
+            
+            </div>
+            
+            
+            
+            
+            <template id="temp3">
+            
+                <style>
+            
+                    #p1{
+            
+                        border: 3px solid pink;
+            
+                        width: 100%;
+                text-align: center;
+                }
+                </style>
+                <p id="p1"> 3rd template</p>
+                </template>
+                <script src="q2.js"></script>
+    </body>
+</html>

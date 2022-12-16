@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flexdemo {
+  width: 32%;
+  height: 90px;
+  margin-bottom: 2%;
+  background-color: bisque;
+}
+.flexdemo1 {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 2%;
+  background-color: bisque;
+}
+</style>
+<body>
+    <div class="container">
+
+        <my-template class="flexdemo" style="background-color:aqua ; text-align: center; font-size: 2rem;" message="Template1" ></my-template>
+
+        <h1 class="flexdemo"> This is H1 </h1>
+        
+
+        <my-template class="flexdemo" style="background-color:bisque ; text-align: center; font-size: 2rem;" message="Template2"></my-template>
+
+        <my-template class="flexdemo1" style="background-color:yellow ; text-align: center; font-size: 2rem;" message="Template3"></my-template>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

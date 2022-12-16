@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>7th assgn</title>
+    </head>
+    <body>
+        <input onkeydown="return checkPhoneKey(event.key)" placeholder="enter mobile no." type="telephone">
+
+    <script>
+
+        function checkPhoneKey(key) {
+
+          return (key >= '0' && key <= '9') || ['+','(',')','-','ArrowLeft','ArrowRight','Delete','Backspace'].includes(key);
+
+        }
+
+    </script>
+    </body>
+</html>
