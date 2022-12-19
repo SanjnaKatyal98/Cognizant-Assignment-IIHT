@@ -1,0 +1,22 @@
+[{
+    "id":98,
+    "name": "sanj",
+    "city": "delhi",
+    "clearedExam": true
+   
+  },
+  {
+    "id":28,
+    "name": "shahid",
+    "city": "bihar",
+    "clearedExam": true
+   
+  },
+  {
+    "id":109,
+    "name": "temp",
+    "city": "Pune",
+    "clearedExam": true
+   
+  }
+]
