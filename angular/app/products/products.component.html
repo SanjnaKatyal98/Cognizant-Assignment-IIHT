@@ -1,0 +1,21 @@
+<h1>Product List</h1>
+
+<input type="text" (keyup)="filterProd()" [(ngModel)]="category" placeholder="category">
+
+<table border="" *ngIf="products.length">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+
+    <tr *ngFor="let p of filteredProducts ;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.price}}</td>
+        <td><img src="{{p.image}}" alt=""></td>
+    </tr>
+</table>
