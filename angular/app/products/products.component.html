@@ -1,0 +1,31 @@
+<h1>Product List</h1>
+<h4> {{msg}}</h4>
+<input type="text" (keyup)="filterProd()" [(ngModel)]="category" placeholder="category">
+
+<table border="" *ngIf="products.length">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>QUANTITY</th>
+        <th>Image</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let p of filteredProducts ;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.price}}</td>
+        <td><app-stars [rating]="p.rating" (ratingClicked)="productRatingClicked($event)"></app-stars></td>
+        <td><input type="number" min=0 value="0" [(ngModel)]="p.quantity"/></td>
+        <td><img src="{{p.image}}" alt=""></td>
+        <td>
+            <span (click)="increaseQuantity(p)"><i class="fa fa-plus"></i></span>
+            <span>{{p.quantity}}</span>
+            <span  (click)="decreaseQuantity(p)"><i class="fa fa-minus"></i></span>
+        </td>
+        <td><button class="btn btn-primary" (click)="disp()">add to cart</button></td>
+    </tr>
+</table>
