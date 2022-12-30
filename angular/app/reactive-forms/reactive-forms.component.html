@@ -1,0 +1,13 @@
+<div class="main">
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" id="bookForm" name="bookForm">
+  <input class="form-control" placeholder="enter book id"
+         type="text" name="id" id="id" formControlName="id">
+  <input class="form-control" type="text" name="title" id="title"
+  placeholder="enter book title" formControlName="title">
+  <input class="form-control" type="text" name="dateOfPublishing" id="dateOfPublishing"
+  placeholder="enter date f publishing" formControlName="dateOfPublishing">
+  <input class="form-control"  type="text" name="Name" id="Name"
+  placeholder="enter author name" formControlName="Name">
+  <input class="form-control"  type="Email" name="Email" id="Email"
+  placeholder="enter email" formControlName="Email">
+</form></div>
