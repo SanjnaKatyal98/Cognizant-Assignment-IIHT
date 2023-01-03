@@ -1,0 +1,18 @@
+.navbar-collapse{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+.navbar-collapse ul li{
+    margin-right: 15px;
+}
+
+.navbar-collapse ul li a{
+    color: white;
+}
+
+.activeLink{
+    border-bottom:1px solid whitesmoke ;
+    color: palevioletred;
+}

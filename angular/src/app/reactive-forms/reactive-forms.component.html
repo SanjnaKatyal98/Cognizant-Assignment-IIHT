@@ -1,0 +1,27 @@
+<div class="main">
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" id="bookForm" name="bookForm">
+  <input class="form-control" placeholder="enter book id"
+         type="text" name="id" id="id" formControlName="id">
+  <input class="form-control" type="text" name="title" id="title"
+  placeholder="enter book title" formControlName="title">
+  <input class="form-control" type="text" name="dateOfPublishing" id="dateOfPublishing"
+  placeholder="enter date of publishing" formControlName="dateOfPublishing">
+  <input class="form-control"  type="text" name="Name" id="Name"
+  placeholder="enter author name" formControlName="Name">
+  <input class="form-control"  type="Email" name="Email" id="Email"
+  placeholder="enter email" formControlName="Email">
+  <div formArrayName="students">
+  <div id="publishers">publishers:
+  <div *ngFor="let publisher of publisher().controls;let i=index">
+<div [formGroupName]="i">
+  publisher {{i+1}}:<br>
+  publisher name:<input class="form-control" type="text" formControlName="pname">
+  publisher mail:<input class="form-control" type="text" formControlName="pmail">
+  <button class="btn btn-secondary" (click)="removePub(i)"> remove Publisher</button>
+</div>
+  </div>
+</div>  
+<p>
+  <button class="btn btn-secondary" (click)="addPub()"> add Publisher</button>
+</p></div>
+</form></div>

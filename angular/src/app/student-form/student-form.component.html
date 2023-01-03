@@ -1,0 +1,33 @@
+<form [formGroup]="studForm" id="sform" (ngSubmit)="onSubmit()">
+    <div formArrayName="students"> 
+        <div *ngFor="let emp of students().controls;
+        let stuIndex=index">
+         <div [formGroupName]="stuIndex" style="border:1px solid blue;padding:10px;width:600px;margin:10px;">
+        
+        {{stuIndex}}
+    
+        <input placeholder="Enter full name" class="form-control"
+        type="text" name="fullName" id="fullName" formControlName="fullName">
+    
+        <input placeholder="Enter age" class="form-control"
+        type="text" name="age" id="age" formControlName="age">
+    
+        <button (click)="removeStud(stuIndex)">Remove student</button>
+        <div formArrayName="marks">
+            <div *ngFor="let skill of studMarks(stuIndex).controls;let markIndex=index;">
+                <div [formGroupName]="markIndex">
+               
+                {{markIndex}}marks:
+                <input class='form-control' type="text" name="mark" id="mark" placeholder="mark" formControlName="mark"/>
+                <input class='form-control' type="text" name="grade" id="grade" placeholder="grade" formControlName="grade"/>
+                 <button (click)="removeStuMark(stuIndex,markIndex)">Remove marks</button>
+                </div>
+            </div>
+        </div>
+        <button type="button" (click)="addStuMarks(stuIndex)">Add marks</button>
+    </div>
+        </div>
+        <button type="button" (click)="addStudent()">Add student</button>
+    </div>
+    </form>
+     {{this.studForm.value | json }}

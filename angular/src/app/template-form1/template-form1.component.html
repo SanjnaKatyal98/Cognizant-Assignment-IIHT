@@ -1,0 +1,44 @@
+<div id="container">
+    <form #tempForm="ngForm" (ngSubmit)="onSubmit(tempForm)">
+        <p> enter id: <input  #Tid="ngModel" type="number" name="tid" required ngModel id="tid"> </p>
+        <div *ngIf="!Tid?.valid && (Tid?.dirty || Tid?.touched)" class="error">
+            <div *ngIf="Tid.errors?.['required']">
+                ID is required
+            </div>
+        </div><br>
+        <p>enter name: <input type="text" id="name" name="name" required #name="ngModel" ngModel minlength="3"></p>
+        <div id="id" *ngIf="!name.valid && (name?.dirty || name?.touched)">
+            <div *ngIf="name.errors?.['required']">
+                Name is required
+            </div>
+            <div *ngIf="name.errors?.['minlength']">
+                min length is 3
+            </div>
+        </div><br>
+        <p>gender:  
+            <input type="radio" id="sex" name="sex" #sex="ngModel" required ngModel>Male
+            <input type="radio" id="sex" name="sex" #sex="ngModel" required ngModel>Female
+        </p><br>
+        <p>enter passport: <input type="text" name="passport" id="passport" required #passport="ngModel" minlength="10" maxlength="10" ngModel> </p>
+        <div id="id" *ngIf="!passport.valid && (passport?.dirty || passport?.touched)">
+            <div *ngIf="passport.errors?.['required']">
+                passport is required
+            </div>
+            <div *ngIf="passport.errors?.['minlength']">
+                min and max length is 10
+            </div>
+            <div *ngIf="passport.errors?.['maxlength']">
+                min and max length is 10
+            </div>
+        </div><br>
+        <p>Date: <input type="date" name="issuanceDate" id="issuanceDate" #issuanceDate="ngModel" ngModel></p><br>
+        <p>dependecies: <input type="number" name="noOfDependents" id="noOfDependents" #noOfDependents="ngModel" required ngModel></p>
+        <div id="id" *ngIf="!noOfDependents.valid && (noOfDependents?.dirty || noOfDependents?.touched)">
+            <div *ngIf="noOfDependents.errors?.['required']">
+                dependecies is required
+            </div>
+        </div><br>
+        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-primary" type="button" (click)="reset(tempForm)">Reset</button>
+    </form>
+</div>            
