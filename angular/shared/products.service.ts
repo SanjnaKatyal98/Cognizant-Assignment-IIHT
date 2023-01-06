@@ -1,0 +1,32 @@
+import { Injectable } from "@angular/core";
+import { IProducts } from "src/app/products/products";
+@Injectable({
+    providedIn:'root'
+})
+export class ProductService{
+    getProducts():IProducts[]{
+        return [
+            {
+                id:1,
+                name:"Pizza",
+                price:400,
+                image: "../../assets/beach.jpg"
+              },{
+                id:2,
+                name:"Shirt",
+                price:300,
+                image: "../../assets/roses.jpg"
+              },{
+                id:3,
+                name:"Lipstick",
+                price:200,
+                image: "../../assets/moon.jpeg"
+              },{
+                id:4,
+                name:"bed",
+                price:1000,
+                image: "../../assets/mountain.jpg"
+              }
+        ];
+    }
+}
