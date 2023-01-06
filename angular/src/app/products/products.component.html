@@ -1,0 +1,21 @@
+<div class="container">
+    <table *ngIf="products.length" class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Sno</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of products;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td><img src="{{p.image}}" alt="no image"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<button class="btn btn-success" (click)="start()">click</button>
